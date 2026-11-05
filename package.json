@@ -1,0 +1,52 @@
+{
+  "name": "react-native-hotfix-server",
+  "version": "0.1.0",
+  "description": "Self-hosted update server for React Native Hotfix.",
+  "type": "module",
+  "main": "src/server.mjs",
+  "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./src/server.mjs"
+    },
+    "./signing": {
+      "types": "./types/signing.d.ts",
+      "default": "./src/signing.mjs"
+    }
+  },
+  "bin": {
+    "hotfix-server": "src/index.mjs"
+  },
+  "files": [
+    "src",
+    "types",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node src/index.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "react-native-hotfix-protocol": "0.1.0"
+  },
+  "engines": {
+    "node": ">=22.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/honglengleng/react-native-hotfix.git",
+    "directory": "packages/hotfix-server"
+  },
+  "homepage": "https://github.com/honglengleng/react-native-hotfix#readme",
+  "bugs": {
+    "url": "https://github.com/honglengleng/react-native-hotfix/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "license": "MIT"
+}
