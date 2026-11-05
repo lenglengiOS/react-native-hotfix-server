@@ -1,6 +1,6 @@
 {
   "name": "react-native-hotfix-server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Self-hosted update server for React Native Hotfix.",
   "type": "module",
   "main": "src/server.mjs",
@@ -30,19 +30,19 @@
     "test": "node --test test/*.test.mjs"
   },
   "dependencies": {
-    "react-native-hotfix-protocol": "0.1.0"
+    "react-native-hotfix-protocol": "0.1.1"
   },
   "engines": {
     "node": ">=22.11.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/honglengleng/react-native-hotfix.git",
+    "url": "git+https://github.com/lenglengiOS/react-native-hotfix.git",
     "directory": "packages/hotfix-server"
   },
-  "homepage": "https://github.com/honglengleng/react-native-hotfix#readme",
+  "homepage": "https://github.com/lenglengiOS/react-native-hotfix#readme",
   "bugs": {
-    "url": "https://github.com/honglengleng/react-native-hotfix/issues"
+    "url": "https://github.com/lenglengiOS/react-native-hotfix/issues"
   },
   "publishConfig": {
     "access": "public",
