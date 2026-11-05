@@ -21,7 +21,14 @@ jobs:
           registry-url: https://registry.npmjs.org
       - run: npm install
       - run: npm test
-      - run: npm publish --access public --provenance
+      - name: Publish package if version is new
+        run: |
+          VERSION="$(node -p "require('./package.json').version")"
+          if npm view "react-native-hotfix-server@${VERSION}" version >/dev/null 2>&1; then
+            echo "react-native-hotfix-server@${VERSION} already exists; skipping npm publish."
+          else
+            npm publish --access public --provenance
+          fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1 || gh release create "$GITHUB_REF_NAME" --generate-notes
