@@ -46,3 +46,8 @@ and supports channel activation and percentage rollouts.
 Production deployments should place immutable `/v1/updates/*` files behind a
 CDN and use PostgreSQL or object storage if multiple server instances publish
 at the same time. Channel pointers are written atomically for a single node.
+
+See the complete
+[private deployment guide](https://github.com/lenglengiOS/react-native-hotfix/blob/master/docs/server-deployment.md)
+for Docker, systemd, private TLS, admin isolation, backup, restore, and upgrade
+procedures.

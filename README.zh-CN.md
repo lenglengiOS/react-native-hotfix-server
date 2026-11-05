@@ -45,3 +45,6 @@ npx hotfix-server
 生产部署应将不可变的 `/v1/updates/*` 文件放在 CDN 后面。如果多个服务端实例
 同时发布，应使用 PostgreSQL 或对象存储协调状态。当前实现的 channel 指针写入
 只保证单节点原子性。
+
+Docker、systemd、私有 TLS、管理接口隔离、备份、恢复和升级的完整步骤见
+[服务端私有化部署](https://github.com/lenglengiOS/react-native-hotfix/blob/master/docs/zh-CN/server-deployment.md)。
