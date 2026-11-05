@@ -7,8 +7,8 @@ React Native Hotfix 的单节点自托管更新服务端。
 ## 安装
 
 ```sh
-npm install react-native-hotfix-server@0.1.1
-npm install -D react-native-hotfix-cli@0.1.1
+npm install react-native-hotfix-server@0.1.2
+npm install -D react-native-hotfix-cli@0.1.2
 ```
 
 使用 `react-native-hotfix-cli` 生成签名密钥后启动服务端：

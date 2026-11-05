@@ -7,8 +7,8 @@ Single-node, self-hosted update server for React Native Hotfix.
 ## Install
 
 ```sh
-npm install react-native-hotfix-server@0.1.1
-npm install -D react-native-hotfix-cli@0.1.1
+npm install react-native-hotfix-server@0.1.2
+npm install -D react-native-hotfix-cli@0.1.2
 ```
 
 Generate signing keys with `react-native-hotfix-cli`, then start the server:
