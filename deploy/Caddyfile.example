@@ -1,0 +1,12 @@
+updates.example.com {
+  encode zstd gzip
+
+  # Publishing is intentionally blocked on the public app-facing hostname.
+  # Use a private admin hostname, VPN, or an SSH tunnel for /v1/admin/*.
+  @admin path /v1/admin/*
+  respond @admin 404
+
+  reverse_proxy 127.0.0.1:3000 {
+    header_up X-Forwarded-Proto {scheme}
+  }
+}
